@@ -3,6 +3,7 @@ import { Box, Divider, Link, Tooltip, Typography } from '@mui/material'
 import { keyframes } from '@emotion/react'
 import * as mfm from 'mfm-js'
 import { Sparkle } from './Sparkle'
+import { Search } from "./Search"
 
 export interface Emoji {
     imageURL: string
@@ -471,7 +472,7 @@ export const RenderAst = ({ ast, emojis, options }: RenderAstProps): JSX.Element
             return <span>{ast.props.emoji}</span>
         }
         case 'search': {
-            return <Box>{ast.props.text} 検索</Box>
+            return <Search query={ast.props.query} />
         }
     }
 
