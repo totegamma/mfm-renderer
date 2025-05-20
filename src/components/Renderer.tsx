@@ -513,7 +513,6 @@ export const MfmRenderer = (props: MfmRendererProps): JSX.Element => {
         <Box
             sx={{
                 whiteSpace: 'pre-wrap',
-                fontSize: '1.2em',
                 fontFamily: 'Hiragino Maru Gothic Pro, BIZ UDGothic, Roboto, HelveticaNeue, Arial, sans-serif;',
                 lineHeight: '1.35',
             }}
