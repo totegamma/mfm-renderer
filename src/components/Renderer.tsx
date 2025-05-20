@@ -50,7 +50,7 @@ export const RenderAst = ({ ast, emojis, options }: RenderAstProps): JSX.Element
 
     switch (ast.type) {
         case 'text': {
-            return <span>{ast.props.text}</span>
+            return ast.props.text
         }
         case 'bold': {
             return (
@@ -82,6 +82,7 @@ export const RenderAst = ({ ast, emojis, options }: RenderAstProps): JSX.Element
                         <Box
                             sx={{
                                 display: 'inline-block',
+                                fontSize: '150%',
                                 animation: `${mfmGlobalTada} ${speed} linear infinite both`,
                                 animationDelay: delay
                             }}
@@ -511,7 +512,10 @@ export const MfmRenderer = (props: MfmRendererProps): JSX.Element => {
     return (
         <Box
             sx={{
-                whiteSpace: 'pre-wrap'
+                whiteSpace: 'pre-wrap',
+                fontSize: '1.2em',
+                fontFamily: 'Hiragino Maru Gothic Pro, BIZ UDGothic, Roboto, HelveticaNeue, Arial, sans-serif;',
+                lineHeight: '1.35',
             }}
         >
             <RenderAst ast={ast} emojis={props.emojis} />
